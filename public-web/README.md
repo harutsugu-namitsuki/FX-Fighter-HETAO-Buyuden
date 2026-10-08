@@ -22,3 +22,15 @@
 ```
 python3 _tools/check_public_web.py
 ```
+
+## ページの一覧（Your Campus 1.1）
+
+| ページ | 中身 |
+|---|---|
+| `index.html` | 入口。3 つのサイトへの案内 |
+| `securities/index.html` | ゆうやけ証券（架空）。口座開設・買付・売却・積立・NISA・電子交付書類 |
+| `insurance/index.html` | こもれび生命（架空）。保険の見積・申込 |
+| `bank/loan.html` | 住宅ローンの仮審査申込（アプリ内で開く） |
+| `common/` | 共通の見た目（style.css）と、アプリとの受け渡し（app.js） |
+
+どのページも、アプリから付けて渡されたデータ（URL の `#d=` の後ろ）が無いと「アプリから開いてください」と出る。
