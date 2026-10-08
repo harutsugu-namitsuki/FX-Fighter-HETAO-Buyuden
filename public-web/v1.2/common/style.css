@@ -1,0 +1,59 @@
+/* 模擬サイト共通の見た目。サイトごとの色は body の class で切り替える */
+:root { --brand: #1b5e9a; --brand-soft: #e8f0f8; --ink: #1f2933; --sub: #66727f; --line: #dde3ea; --plus: #1a7f4b; --minus: #c0392b; --warn-bg: #fff6e0; }
+body.sec { --brand: #d9622b; --brand-soft: #fdf0e8; }
+body.ins { --brand: #2f8a5b; --brand-soft: #eaf6ef; }
+body.bank { --brand: #1b5e9a; --brand-soft: #e8f0f8; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; color: var(--ink); background: #f4f6f8; font-size: 15px; line-height: 1.6; padding-bottom: 88px; }
+header { background: var(--brand); color: #fff; padding: 12px 16px; position: sticky; top: 0; z-index: 5; }
+header .name { font-size: 19px; font-weight: 700; letter-spacing: .04em; }
+header .tag { font-size: 11px; opacity: .9; }
+.mockbar { background: #333; color: #fff; font-size: 11px; padding: 4px 16px; }
+main { max-width: 560px; margin: 0 auto; padding: 12px; }
+.card { background: #fff; border-radius: 12px; padding: 14px 16px; margin: 0 0 12px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.card h2 { font-size: 16px; margin: 0 0 10px; color: var(--brand); }
+.card h3 { font-size: 14px; margin: 14px 0 6px; }
+.tabs { display: flex; gap: 6px; overflow-x: auto; margin: 0 0 12px; padding-bottom: 2px; }
+.tabs button { flex: 0 0 auto; border: 1px solid var(--line); background: #fff; border-radius: 18px; padding: 6px 12px; font-size: 13px; color: var(--ink); }
+.tabs button.on { background: var(--brand); border-color: var(--brand); color: #fff; font-weight: 700; }
+.row { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.row:last-child { border-bottom: none; }
+.row .k { color: var(--sub); }
+.row .v { text-align: right; font-weight: 600; }
+.plus { color: var(--plus); } .minus { color: var(--minus); }
+.note { font-size: 12px; color: var(--sub); margin: 6px 0; }
+.caution { background: var(--warn-bg); border-left: 4px solid #e0a800; padding: 8px 12px; font-size: 12px; margin: 8px 0; border-radius: 4px; }
+.caution ul { margin: 0; padding-left: 18px; }
+.pill { display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 10px; background: var(--brand-soft); color: var(--brand); font-weight: 700; margin-left: 4px; }
+label { display: block; font-size: 13px; color: var(--sub); margin: 10px 0 4px; }
+input[type=text], input[type=number], select { width: 100%; font-size: 16px; padding: 9px 10px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.check { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; color: var(--ink); margin: 8px 0; }
+.check input { margin-top: 4px; }
+.btn { display: block; width: 100%; border: none; border-radius: 10px; padding: 12px; font-size: 15px; font-weight: 700; background: var(--brand); color: #fff; margin: 12px 0 0; text-align: center; text-decoration: none; }
+.btn.sub { background: #fff; color: var(--brand); border: 1px solid var(--brand); }
+.btn:disabled { opacity: .45; }
+.err { color: var(--minus); font-size: 13px; margin: 6px 0 0; }
+.ok { background: var(--brand-soft); border-radius: 10px; padding: 12px; font-size: 14px; }
+table.hold { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.hold td { padding: 6px 2px; border-bottom: 1px solid var(--line); vertical-align: top; }
+table.hold td.n { text-align: right; white-space: nowrap; }
+.pencil { border: 1px solid var(--line); background: #fff; border-radius: 6px; padding: 0 6px; font-size: 13px; margin-left: 4px; cursor: pointer; }
+.priceedit { display: flex; gap: 4px; justify-content: flex-end; }
+.priceedit input { width: 96px; font-size: 14px; padding: 4px 6px; }
+.priceedit button { font-size: 12px; padding: 4px 8px; }
+.list-item { padding: 8px 0; border-bottom: 1px solid var(--line); cursor: pointer; }
+.list-item:last-child { border-bottom: none; }
+.list-item .t { font-weight: 700; font-size: 14px; }
+.list-item .s { font-size: 12px; color: var(--sub); }
+.steps { display: flex; gap: 4px; margin: 0 0 12px; }
+.steps span { flex: 1; text-align: center; font-size: 11px; padding: 4px 0; border-radius: 4px; background: #e6e9ed; color: var(--sub); }
+.steps span.on { background: var(--brand); color: #fff; font-weight: 700; }
+.returnbar { position: fixed; left: 0; right: 0; bottom: 0; background: #fff; border-top: 1px solid var(--line); padding: 10px 12px; z-index: 10; }
+.returnbar .inner { max-width: 560px; margin: 0 auto; display: flex; gap: 10px; align-items: center; }
+.returnbar .count { font-size: 12px; color: var(--sub); flex: 1; }
+.returnbar a { flex: 0 0 auto; background: #333; color: #fff; text-decoration: none; padding: 10px 18px; border-radius: 22px; font-weight: 700; font-size: 14px; }
+.dialog { position: fixed; inset: 0; background: rgba(0,0,0,.45); display: flex; align-items: center; justify-content: center; z-index: 20; padding: 16px; }
+.dialog .box { background: #fff; border-radius: 12px; max-width: 480px; width: 100%; max-height: 80vh; overflow: auto; padding: 16px; }
+.dialog .box h3 { margin: 0 0 8px; font-size: 16px; }
+.dialog .box pre { white-space: pre-wrap; font-family: inherit; font-size: 13px; margin: 0; }
+footer { text-align: center; font-size: 11px; color: var(--sub); padding: 16px; }
